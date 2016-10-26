@@ -14,3 +14,6 @@ server.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 server.connect(host, port, user, mima)
 #执行命令
 stdin, stdout, stderr = server.exec_command('ls -l')
+print(stdout.read())
+server.close()
+
