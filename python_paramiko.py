@@ -2,7 +2,7 @@
 #coding:utf-8
 import paramiko
 host = '10.133.99.68'
-port = '22'
+port = 22
 user = 'ebss'
 mima = 'picc1234'
 paramiko.util.log_to_file('paramiko.log')
