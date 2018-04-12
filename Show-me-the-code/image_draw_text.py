@@ -4,7 +4,7 @@
 from PIL import Image,ImageDraw,ImageFont
 
 font = ImageFont.truetype("arial.ttf",36)
-color = (255,0,00)                  #rgb:red color
+color = (255,0,0)                   #rgb:red color
 
 def DrawText(img,text):
     im = Image.open(img)            #Image Object
@@ -15,7 +15,7 @@ def DrawText(img,text):
     im_draw.text(xy,text,font=font,fill=color)
     im.save(img)
     
-if __name__ == '__main___':
+if __name__ == '__main__':
     img = 'qq.jpg'
     text = "4"
     DrawText(img,text)
