@@ -16,3 +16,4 @@ if __name__ == '__main__':
     txt = "123.txt"
     counts = count_words(txt)
     print (txt + "中单词出现个数为：",len(counts))
+    #结果和 ”cat 123.txt|wc -w“的值不一样
