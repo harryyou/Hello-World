@@ -2,6 +2,7 @@
 #coding:utf-8
 #sorting algorithm
 
+#快速排序
 #quick sort
 def quick_sort(l):
     if len(l) < 2:
@@ -14,7 +15,7 @@ def quick_sort(l):
         return quick_sort(smaller) + [pivot] + quick_sort(larger)
 
 
-
+#选择排序
 #selection sort
 #serarch the index of the smallest one
 def findsmallest(l):
@@ -36,3 +37,14 @@ def selection_sort(l):
         new_l.append(l.pop(smallest))
 
     return new_l
+
+#冒泡排序
+#bubble sort
+def bsort(l):
+    while i<range(len(l)):
+        for i in range(len(l)):
+            if l[i] > l[i+1]:
+                c = l[i]
+                l[i] = l[i+1]
+                l[i+1] = c
+     return l
