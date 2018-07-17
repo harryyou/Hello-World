@@ -56,3 +56,24 @@ def bubble_sort(l):
             break
 
     return l
+
+
+def bubble_sorted(l):
+    sortBorder = len(l) - 1
+
+    for i in range(len(l) - 1):
+        isSorted = True
+        
+        for j in range(sortBorder):
+            if l[j] > l[j+1]:
+                tmp = l[j]
+                l[j] = l[j+1]
+                l[j+1] = tmp
+                isSorted = False  
+                lastExchangeIndex = j   #有序数列的边界
+
+        sortBorder = lastExchangeIndex  #下一轮循环只需要边界前面的无序数列进行
+        if isSorted:
+            break
+
+    return l
