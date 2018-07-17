@@ -42,12 +42,17 @@ def selection_sort(l):
 #冒泡排序
 #bubble sort
 def bubble_sort(l):
-    i = 0
-    while i<len(l):
-        i += 1
-        for x in range(len(l)-1):
+    for i in range(len(l) - 1):          #只需要循环(len(l) - 1)次
+        isSorted = True                  #有序标记，每一轮初始默认有序
+
+        for x in range(len(l) - 1 - i):  #每一轮循环，必定会有一个元素添加到有序区域（即末尾的有序区域每次必定至少加1）
             if l[x] > l[x+1]:
                 tmp = l[x]
                 l[x] = l[x+1]
                 l[x+1] = tmp
+                isSorted = False         #如果有元素交换，说明不是有序，则继续循环
+            
+        if isSorted:                     #如果有序，则直接跳出整个循环
+            break
+
     return l
