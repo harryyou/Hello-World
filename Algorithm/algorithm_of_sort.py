@@ -37,3 +37,17 @@ def selection_sort(l):
         new_l.append(l.pop(smallest))
 
     return new_l
+
+
+#冒泡排序
+#bubble sort
+def bubble_sort(l):
+    i = 0
+    while i<len(l):
+        i += 1
+        for x in range(len(l)-1):
+            if l[x] > l[x+1]:
+                tmp = l[x]
+                l[x] = l[x+1]
+                l[x+1] = tmp
+    return l
